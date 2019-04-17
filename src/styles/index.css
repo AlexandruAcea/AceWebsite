@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+}
+
+@font-face {
+  font-family: FuturaBold;
+  src: url(gtcondensedblack.otf);
+}
+
+@font-face {
+  font-family: GTMono;
+  src: url(gtmonomedium.otf);
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f7ece1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner {
+  height: 100vh;
+  min-width: 60rem;
+  position: relative;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#aceLogo {
+  max-width: 7rem;
+}
+
+.text {
+  width: 100%;
+}
+
+#title {
+  margin-top: 3rem;
+}
+
+#title h1 {
+  font-family: FuturaBold;
+  font-size: 5em;
+  color: #242038;
+  line-height: 3.5rem;
+}
+
+#smartTitle {
+  display: flex;
+  flex-direction: row;
+}
+#smart {
+  margin-left: 1rem;
+  background: #242038;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: 0.5rem;
+}
+
+#smart h1 {
+  color: #f7ece1;
+}
+
+p {
+  font-size: 1.3em;
+  margin-top: 1.5rem;
+  font-family: GTMono;
+  color: #725ac1;
+}
