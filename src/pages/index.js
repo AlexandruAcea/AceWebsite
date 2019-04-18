@@ -1,5 +1,6 @@
-import React, { Component } from "react"
+import React from "react"
 import { Link } from "gatsby"
+import { Button } from "../components/common"
 import "../styles/index.css"
 import logo from "../images/logo.svg"
 
@@ -10,7 +11,7 @@ class IndexPage extends React.Component {
     titles: [
       "ace",
       "alexandru",
-      "alexacea",
+      "@alexacea",
       "the ace",
       "ya boi",
       "thelegend27",
@@ -49,7 +50,7 @@ class IndexPage extends React.Component {
 
           <div className="text">
             <div id="title">
-              <h1>Hello,</h1>
+              <h1 id="hello">Hello,</h1>
               <div id="smartTitle">
                 <h1>I'm</h1>
                 <div id="smart">
@@ -57,9 +58,16 @@ class IndexPage extends React.Component {
                 </div>
                 <h1>.</h1>
               </div>
-
-              <p>I BUILD ALL KINDS OF COOL STUFF</p>
+              <p>I BUILD MOBILE &amp; WEB EXPERIENCES USING THE NEWEST TECH.</p>
+              <h2>
+                Have anything in mind? <br /> Let's work together
+              </h2>
             </div>
+          </div>
+          <div id="buttonSayHi">
+            <Button>
+              <h1>SAY HI</h1>
+            </Button>
           </div>
         </div>
       </div>
