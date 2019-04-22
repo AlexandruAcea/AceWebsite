@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 9rem;
+  width: 15rem;
   height: 3rem;
 }
 
@@ -13,7 +13,7 @@
   position: absolute;
   border: solid #725ac1 1.3px;
   background: #f7ece1;
-  width: 9rem;
+  width: 15rem;
   height: 3rem;
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@
 
 .downer {
   position: absolute;
-  width: 9rem;
+  width: 15rem;
   height: 3rem;
   background: #725ac1;
   transition: 0.3s;

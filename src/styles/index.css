@@ -4,17 +4,17 @@
 
 @font-face {
   font-family: FuturaBold;
-  src: url(gtcondensedblack.otf);
+  src: url(fonts/gtcondensedblack.otf);
 }
 
 @font-face {
   font-family: GTMono;
-  src: url(gtmonomedium.otf);
+  src: url(fonts/gtmonomedium.otf);
 }
 
 @font-face {
   font-family: GTExtended;
-  src: url(gtlight.otf);
+  src: url(fonts/gtlight.otf);
 }
 
 .background {
@@ -24,69 +24,73 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: auto;
 }
 
 .inner {
   height: 100vh;
-  min-width: 60rem;
+  width: 80%;
+  max-width: 60rem;
+  padding-top: 2rem;
   position: relative;
-  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 200px 50px 150px 100px;
+}
+
+.links {
+  padding-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.links h1 {
+  text-align: center;
+  font-family: GTMono;
+  font-size: 1.1rem;
+  color: #242038;
+}
+
+.logoContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 #aceLogo {
-  max-width: 8.5rem;
-  position: absolute;
-  right: 0;
+  max-width: 12vw;
 }
 
-.text {
-  width: 100%;
-}
-
-#title h1 {
+.title h1 {
   font-family: FuturaBold;
-  font-size: 5em;
+  font-size: 6vw;
   color: #242038;
-  line-height: 4rem;
 }
 
-#smartTitle {
+.paragraph {
   display: flex;
-  flex-direction: row;
-}
-#smart {
-  margin-left: 1rem;
-  background: #242038;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-right: 0.5rem;
-}
-
-#smart h1 {
-  color: #f7ece1;
+  align-items: center;
+  grid-column: 1 / -1;
 }
 
 p {
-  font-size: 1.1em;
-  margin-top: 2.5rem;
   font-family: GTMono;
   color: #725ac1;
+  font-size: 1.5vw;
 }
 
 h2 {
   font-family: GTExtended;
   color: #242038;
   font-size: 2.5em;
-  line-height: 3rem;
-  letter-spacing: -0.1rem;
   font-weight: 500;
   margin-top: 1rem;
+  grid-column: 1 / -1;
 }
 
 #buttonSayHi {
   margin-top: 1rem;
   width: 100%;
+  grid-column: 1 / -1;
 }

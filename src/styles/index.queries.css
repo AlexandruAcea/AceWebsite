@@ -1,0 +1,186 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .title h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .logoContainer {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    order: 2;
+  }
+
+  .paragraph {
+    order: 3;
+  }
+
+  #buttonSayHi {
+    order: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subtitle {
+    order: 4;
+  }
+
+  #aceLogo {
+    max-width: 5rem;
+  }
+
+  .subtitle h2 {
+    font-size: 34px;
+    line-height: 2rem;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 0;
+    order: 2;
+  }
+
+  #buttonSayHi .buttonBody,
+  .upper,
+  .downer {
+    width: 100%;
+  }
+
+  .inner {
+    width: 90%;
+    padding-top: 3rem;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px minmax(50px, max-content) 80px 150px max-content;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .title h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  #aceLogo {
+    max-width: 5rem;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .inner {
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 130px 50px 150px 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  #aceLogo {
+    max-width: 7rem;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .inner {
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 130px 50px 150px 100px;
+  }
+}
+
+/* TABLET OR SO */
+@media only screen and (min-width: 992px) {
+  .title h1 {
+    font-size: 4.5rem;
+    line-height: 4rem;
+  }
+
+  #aceLogo {
+    max-width: 10rem;
+  }
+
+  p {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .inner {
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 180px 50px 150px 100px;
+  }
+}
+
+/* PC */
+@media only screen and (min-width: 1200px) {
+  .title h1 {
+    font-size: 4.5rem;
+  }
+
+  #aceLogo {
+    max-width: 6rem;
+    margin-left: -12px;
+  }
+
+  p {
+    position: absolute;
+    font-size: 20px;
+    margin: 0;
+    bottom: 0;
+  }
+
+  .inner {
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 20% max-content max-content max-content;
+  }
+
+  .logoContainer {
+    order: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .links {
+    order: 2;
+  }
+
+  .title {
+    grid-column: 1 / -1;
+    order: 3;
+  }
+
+  .paragraph {
+    position: relative;
+    height: 3rem;
+    order: 4;
+  }
+
+  .subtitle {
+    margin-top: 0.4rem;
+    order: 5;
+    grid-column: 1 / -1;
+  }
+
+  #buttonSayHi {
+    order: 6;
+  }
+
+  .subtitle h2 {
+    font-size: 1.5rem;
+  }
+}

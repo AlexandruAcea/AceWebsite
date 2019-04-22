@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Button } from "../components/common"
 import "../styles/index.css"
+import "../styles/index.queries.css"
 import logo from "../images/logo.svg"
 
 import SEO from "../components/seo"
@@ -46,24 +47,32 @@ class IndexPage extends React.Component {
       <div className="background">
         <SEO title="Home" />
         <div className="inner">
-          <img id="aceLogo" src={logo} />
-
-          <div className="text">
-            <div id="title">
-              <h1 id="hello">Hello,</h1>
-              <div id="smartTitle">
-                <h1>I'm</h1>
-                <div id="smart">
-                  <h1>{this.state.title}</h1>
-                </div>
-                <h1>.</h1>
-              </div>
-              <p>I BUILD MOBILE &amp; WEB EXPERIENCES USING THE NEWEST TECH.</p>
-              <h2>
-                Have anything in mind? <br /> Let's work together
-              </h2>
-            </div>
+          <div className="logoContainer">
+            <img id="aceLogo" src={logo} />
           </div>
+
+          <div className="links">
+            <h1>Home</h1>
+            <h1>Blog</h1>
+            <h1>Shop</h1>
+          </div>
+
+          <div className="title">
+            <h1>Hello, I'm {this.state.title}</h1>
+          </div>
+
+          <div className="paragraph">
+            <p>I'M BUILDING EXPERIENCES &amp; INSPIRING PEOPLE.</p>
+          </div>
+
+          <div className="subtitle">
+            <h2>
+              My name is Alex, but you can call me Ace. I create the best
+              experiences for web &amp; mobile using some of the newest
+              technologies and principles.
+            </h2>
+          </div>
+
           <div id="buttonSayHi">
             <Button>
               <h1>SAY HI</h1>
