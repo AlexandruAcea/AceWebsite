@@ -17,80 +17,107 @@
   src: url(fonts/gtlight.otf);
 }
 
+@font-face {
+  font-family: GT;
+  src: url(fonts/sfproheavy.otf);
+}
+
 .background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #f7ece1;
+  background-color: #000;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  overflow: auto;
 }
 
-.inner {
+.page1 {
   height: 100vh;
-  width: 80%;
-  max-width: 60rem;
-  padding-top: 2rem;
-  position: relative;
-  display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 200px 50px 150px 100px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.links {
-  padding-top: 5px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.links h1 {
+.page1 h1 {
   text-align: center;
-  font-family: GTMono;
-  font-size: 1.1rem;
-  color: #242038;
-}
-
-.logoContainer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-#aceLogo {
-  max-width: 12vw;
-}
-
-.title h1 {
-  font-family: FuturaBold;
-  font-size: 6vw;
-  color: #242038;
-}
-
-.paragraph {
-  display: flex;
-  align-items: center;
-  grid-column: 1 / -1;
-}
-
-p {
-  font-family: GTMono;
-  color: #725ac1;
-  font-size: 1.5vw;
-}
-
-h2 {
+  color: white;
+  opacity: 0.3;
+  line-height: 40px;
+  margin: 0;
   font-family: GTExtended;
-  color: #242038;
-  font-size: 2.5em;
-  font-weight: 500;
-  margin-top: 1rem;
-  grid-column: 1 / -1;
 }
 
-#buttonSayHi {
-  margin-top: 1rem;
-  width: 100%;
-  grid-column: 1 / -1;
+.page1 #hellotext1 {
+  font-size: 20px;
 }
+
+.page1 #ace-logo {
+  width: 200px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.page1 #hellotext2 {
+  font-size: 20px;
+}
+
+#pic1,
+#pic2,
+#pic3 {
+  height: 200px;
+  position: absolute;
+}
+
+#pic1 {
+  left: -50px;
+  top: 50px;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+#pic2 {
+  right: -50px;
+  bottom: 50px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+#pic3 {
+  left: -50px;
+  bottom: 0;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.page2 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 100vh;
+  background: white;
+}
+/*# sourceMappingURL=index.css.map */

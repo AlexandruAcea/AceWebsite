@@ -3,81 +3,32 @@ import { Link } from "gatsby"
 import { Button } from "../components/common"
 import "../styles/index.css"
 import "../styles/index.queries.css"
-import logo from "../images/logo.svg"
+import logoWhite from "../images/supremeletters.png"
+
+import pic1 from "../images/pic1.jpg"
+import pic2 from "../images/pic2.jpg"
+import pic3 from "../images/pic3.jpg"
 
 import SEO from "../components/seo"
 
+//#f7ece1 color you might (not) need
+
 class IndexPage extends React.Component {
-  state = {
-    titles: [
-      "ace",
-      "alexandru",
-      "@alexacea",
-      "the ace",
-      "ya boi",
-      "thelegend27",
-    ],
-    title: "ace",
-    count: 0,
-  }
-
-  tick() {
-    if (this.state.count !== this.state.titles.length - 1)
-      this.setState(prevState => ({
-        title: this.state.titles[prevState.count],
-        count: prevState.count + 1,
-      }))
-    else
-      this.setState(prevState => ({
-        title: this.state.titles[prevState.count],
-        count: 0,
-      }))
-  }
-
-  componentDidMount() {
-    this.interval = setInterval(() => this.tick(), 1000)
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval)
-  }
-
   render() {
     return (
       <div className="background">
-        <SEO title="Home" />
-        <div className="inner">
-          <div className="logoContainer">
-            <img id="aceLogo" src={logo} />
-          </div>
+        <div className="page1">
+          <h1 id="hellotext1">hi there, i'm</h1>
+          <img id="ace-logo" src={logoWhite}></img>
+          <h1 id="hellotext2">and i'm a creator</h1>
 
-          <div className="links">
-            <h1>Home</h1>
-            <h1>Blog</h1>
-            <h1>Shop</h1>
-          </div>
+          <img id="pic1" src={pic1}></img>
+          <img id="pic2" src={pic2}></img>
+          <img id="pic3" src={pic3}></img>
+        </div>
 
-          <div className="title">
-            <h1>Hello, I'm {this.state.title}</h1>
-          </div>
-
-          <div className="paragraph">
-            <p>I'M BUILDING EXPERIENCES &amp; INSPIRING PEOPLE.</p>
-          </div>
-
-          <div className="subtitle">
-            <h2>
-              My name is Alex, but you can call me Ace. I create the best
-              experiences for web &amp; mobile using some of the newest
-              technologies and principles.
-            </h2>
-          </div>
-
-          <div id="buttonSayHi">
-            <Button>
-              <h1>SAY HI</h1>
-            </Button>
-          </div>
+        <div className="page2">
+          <h1>Helloooo</h1>
         </div>
       </div>
     )

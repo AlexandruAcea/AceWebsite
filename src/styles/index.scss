@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+}
+
+@font-face {
+  font-family: FuturaBold;
+  src: url(fonts/gtcondensedblack.otf);
+}
+
+@font-face {
+  font-family: GTMono;
+  src: url(fonts/gtmonomedium.otf);
+}
+
+@font-face {
+  font-family: GTExtended;
+  src: url(fonts/gtlight.otf);
+}
+
+@font-face {
+  font-family: GT;
+  src: url(fonts/sfproheavy.otf);
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  position: relative;
+}
+
+.page1 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    color: white;
+    opacity: 0.3;
+    line-height: 40px;
+    margin: 0;
+    font-family: GTExtended;
+  }
+
+  #hellotext1 {
+    font-size: 20px;
+  }
+
+  #ace-logo {
+    width: 200px;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #hellotext2 {
+    font-size: 20px;
+  }
+}
+
+#pic1,
+#pic2,
+#pic3 {
+  height: 200px;
+  position: absolute;
+}
+
+#pic1 {
+  left: -50px;
+  top: 50px;
+  transform: rotate(20deg);
+}
+
+#pic2 {
+  right: -50px;
+  bottom: 50px;
+  transform: rotate(-20deg);
+}
+
+#pic3 {
+  left: -50px;
+  bottom: 0;
+  transform: rotate(10deg);
+}
+
+.page2 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 100vh;
+  background: white;
+}
