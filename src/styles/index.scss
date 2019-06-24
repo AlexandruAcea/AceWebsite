@@ -1,5 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
+  overflow-y: auto;
 }
 
 @font-face {
@@ -22,25 +27,62 @@
   src: url(fonts/sfproheavy.otf);
 }
 
-.background {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
+.home-wrapper {
   height: 100vh;
-  background-color: #000;
-  display: flex;
+  background: black;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page2 {
   position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: red;
+  color: white;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.headerActive {
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+}
+
+#hamburger-item {
+  height: 18px;
+  position: absolute;
+  right: 30px;
+  margin-top: 42px;
+  opacity: 0;
 }
 
 .page1 {
+  position: relative;
+  overflow: hidden;
   height: 100vh;
   width: 100vw;
+  background: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .middleContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: textAnim;
+    animation-duration: 2s;
+  }
 
   h1 {
     text-align: center;
@@ -64,38 +106,98 @@
 
   #hellotext2 {
     font-size: 20px;
+    margin-bottom: 40px;
   }
 }
 
 #pic1,
 #pic2,
-#pic3 {
+#pic3,
+#pic4 {
   height: 200px;
   position: absolute;
 }
 
 #pic1 {
+  height: 250px;
   left: -50px;
-  top: 50px;
+  top: 0px;
   transform: rotate(20deg);
+
+  animation-name: example1;
+  animation-duration: 1s;
 }
 
 #pic2 {
-  right: -50px;
-  bottom: 50px;
-  transform: rotate(-20deg);
+  height: 230px;
+  left: -40px;
+  bottom: 30px;
+  transform: rotate(10deg);
+
+  animation-name: example2;
+  animation-duration: 1s;
 }
 
 #pic3 {
-  left: -50px;
-  bottom: 0;
-  transform: rotate(10deg);
+  height: 250px;
+  right: -50px;
+  bottom: 0px;
+  transform: rotate(-10deg);
+
+  animation-name: example3;
+  animation-duration: 1s;
 }
 
-.page2 {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  margin-top: 100vh;
-  background: white;
+#pic4 {
+  right: -60px;
+  top: 110px;
+  transform: rotate(-20deg);
+
+  animation-name: example4;
+  animation-duration: 1s;
+}
+
+@keyframes textAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes example1 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -50px;
+  }
+}
+
+@keyframes example2 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -40px;
+  }
+}
+
+@keyframes example3 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -50px;
+  }
+}
+
+@keyframes example4 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -60px;
+  }
 }
