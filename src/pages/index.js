@@ -14,10 +14,13 @@ import ham from "../images/hamburger.png"
 import SEO from "../components/seo"
 
 var elem
+var scaleFactor = 1
+var opacityFactor = 0.3
 
 class IndexPage extends React.Component {
   state = {
     x: 0,
+    y: 0,
   }
 
   componentDidMount() {
@@ -28,9 +31,9 @@ class IndexPage extends React.Component {
 
   handleScroll = e => {
     let element = e.target
-    console.log(element.scrollTop)
+    //console.log(element.scrollTop / 1000 - 1)
 
-    this.setState({ x: element.scrollTop })
+    this.setState({ x: element.scrollTop, y: element.scrollHeight })
 
     if (element.scrollHeight - element.scrollTop === element.clientHeight) {
       //console.log("hello this works")
@@ -38,22 +41,29 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    if (Math.abs(this.state.x / 1000 - 1) >= 0.5) {
+      scaleFactor = Math.abs(this.state.x / 1000 - 1)
+    }
+
+    if (Math.abs(this.state.x / 1000 - 0.3) >= 0) {
+      opacityFactor = Math.abs(this.state.x / 1000 - 0.3)
+    }
+
     return (
       <div className="home-wrapper" onScroll={this.handleScroll}>
         <div className="page1">
           <div className="middleContent">
-            <h1 id="hellotext1">hi there, i'm</h1>
+            <h1 id="hellotext1" style={{ opacity: opacityFactor }}>
+              hi there, i'm
+            </h1>
 
-            <div
-              id="header"
-              className={this.state.x > 333 ? "headerActive" : ""}
-            >
+            <div className={this.state.x > 333 ? "headerActive" : "header"}>
               <img
                 ref="acelogo"
                 id="ace-logo"
                 src={logoWhite}
                 style={{
-                  transform: this.state.x > 333 ? `scale(0.5)` : "",
+                  transform: `scale(${scaleFactor})`,
                 }}
               />
 
@@ -61,10 +71,12 @@ class IndexPage extends React.Component {
                 id="hamburger-item"
                 src={ham}
                 alt=""
-                style={{ opacity: this.state.x > 333 ? 1 : 0 }}
+                style={{ opacity: this.state.x > 0.204 * this.state.y ? 1 : 0 }}
               />
             </div>
-            <h1 id="hellotext2">and i'm a creator</h1>
+            <h1 id="hellotext2" style={{ opacity: opacityFactor }}>
+              and i'm a creator
+            </h1>
           </div>
 
           <img
