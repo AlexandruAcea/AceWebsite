@@ -1,0 +1,73 @@
+@keyframes textAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textAnim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes example1 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -50px;
+  }
+}
+
+@keyframes example2 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -40px;
+  }
+}
+
+@keyframes example3 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -50px;
+  }
+}
+
+@keyframes example4 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -60px;
+  }
+}
+
+@font-face {
+  font-family: FuturaBold;
+  src: url(fonts/gtcondensedblack.otf);
+}
+
+@font-face {
+  font-family: GTMono;
+  src: url(fonts/gtmonomedium.otf);
+}
+
+@font-face {
+  font-family: GTExtended;
+  src: url(fonts/gtlight.otf);
+}
+
+@font-face {
+  font-family: GT;
+  src: url(fonts/sfproheavy.otf);
+}

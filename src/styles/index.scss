@@ -7,25 +7,7 @@ html {
   overflow-y: auto;
 }
 
-@font-face {
-  font-family: FuturaBold;
-  src: url(fonts/gtcondensedblack.otf);
-}
-
-@font-face {
-  font-family: GTMono;
-  src: url(fonts/gtmonomedium.otf);
-}
-
-@font-face {
-  font-family: GTExtended;
-  src: url(fonts/gtlight.otf);
-}
-
-@font-face {
-  font-family: GT;
-  src: url(fonts/sfproheavy.otf);
-}
+@import "animations";
 
 .home-wrapper {
   height: 100vh;
@@ -37,7 +19,7 @@ html {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background: darkgray;
+  background: black;
   color: white;
 }
 
@@ -45,6 +27,7 @@ html {
   display: flex;
   justify-content: center;
   width: 100vw;
+  position: relative;
 }
 
 .headerActive {
@@ -65,7 +48,6 @@ html {
 }
 
 .page1 {
-  z-index: 1;
   position: relative;
   overflow: hidden;
   height: 100vh;
@@ -75,16 +57,6 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  .middleContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    animation-name: textAnim;
-    animation-duration: 2s;
-  }
 
   h1 {
     text-align: center;
@@ -97,6 +69,8 @@ html {
 
   #hellotext1 {
     font-size: 20px;
+    animation-name: textAnim2;
+    animation-duration: 2s;
   }
 
   #ace-logo {
@@ -105,11 +79,15 @@ html {
     margin: 0;
     margin-top: 10px;
     margin-bottom: 10px;
+    animation-name: textAnim;
+    animation-duration: 2s;
   }
 
   #hellotext2 {
     font-size: 20px;
     margin-bottom: 40px;
+    animation-name: textAnim2;
+    animation-duration: 2s;
   }
 }
 
@@ -158,49 +136,4 @@ html {
 
   animation-name: example4;
   animation-duration: 1s;
-}
-
-@keyframes textAnim {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes example1 {
-  from {
-    left: -200px;
-  }
-  to {
-    left: -50px;
-  }
-}
-
-@keyframes example2 {
-  from {
-    left: -200px;
-  }
-  to {
-    left: -40px;
-  }
-}
-
-@keyframes example3 {
-  from {
-    right: -200px;
-  }
-  to {
-    right: -50px;
-  }
-}
-
-@keyframes example4 {
-  from {
-    right: -200px;
-  }
-  to {
-    right: -60px;
-  }
 }

@@ -52,32 +52,30 @@ class IndexPage extends React.Component {
     return (
       <div className="home-wrapper" onScroll={this.handleScroll}>
         <div className="page1">
-          <div className="middleContent">
-            <h1 id="hellotext1" style={{ opacity: opacityFactor }}>
-              hi there, i'm
-            </h1>
+          <h1 id="hellotext1" style={{ opacity: opacityFactor }}>
+            hi there, i'm
+          </h1>
 
-            <div className={this.state.x > 333 ? "headerActive" : "header"}>
-              <img
-                ref="acelogo"
-                id="ace-logo"
-                src={logoWhite}
-                style={{
-                  transform: `scale(${scaleFactor})`,
-                }}
-              />
+          <div className={this.state.x > 333 ? "headerActive" : "header"}>
+            <img
+              ref="acelogo"
+              id="ace-logo"
+              src={logoWhite}
+              style={{
+                transform: `scale(${scaleFactor})`,
+              }}
+            />
 
-              <img
-                id="hamburger-item"
-                src={ham}
-                alt=""
-                style={{ opacity: this.state.x > 0.204 * this.state.y ? 1 : 0 }}
-              />
-            </div>
-            <h1 id="hellotext2" style={{ opacity: opacityFactor }}>
-              and i'm a creator
-            </h1>
+            <img
+              id="hamburger-item"
+              src={ham}
+              alt=""
+              style={{ opacity: this.state.x > 0.204 * this.state.y ? 1 : 0 }}
+            />
           </div>
+          <h1 id="hellotext2" style={{ opacity: opacityFactor }}>
+            and i'm a creator
+          </h1>
 
           <img
             id="pic1"

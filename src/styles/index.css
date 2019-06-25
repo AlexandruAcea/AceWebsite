@@ -7,194 +7,6 @@ html {
   overflow-y: auto;
 }
 
-@font-face {
-  font-family: FuturaBold;
-  src: url(fonts/gtcondensedblack.otf);
-}
-
-@font-face {
-  font-family: GTMono;
-  src: url(fonts/gtmonomedium.otf);
-}
-
-@font-face {
-  font-family: GTExtended;
-  src: url(fonts/gtlight.otf);
-}
-
-@font-face {
-  font-family: GT;
-  src: url(fonts/sfproheavy.otf);
-}
-
-.home-wrapper {
-  height: 100vh;
-  background: black;
-  -webkit-overflow-scrolling: touch;
-}
-
-.page2 {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background: darkgray;
-  color: white;
-}
-
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100vw;
-}
-
-.headerActive {
-  width: 100vw;
-  z-index: 33;
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  top: 0;
-}
-
-#hamburger-item {
-  height: 18px;
-  position: absolute;
-  right: 30px;
-  margin-top: 42px;
-  opacity: 0;
-}
-
-.page1 {
-  z-index: 1;
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
-  background: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.page1 .middleContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation-name: textAnim;
-          animation-name: textAnim;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-.page1 h1 {
-  text-align: center;
-  color: white;
-  opacity: 0.3;
-  line-height: 40px;
-  margin: 0;
-  font-family: GTExtended;
-}
-
-.page1 #hellotext1 {
-  font-size: 20px;
-}
-
-.page1 #ace-logo {
-  width: 200px;
-  height: 88px;
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.page1 #hellotext2 {
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-#pic1,
-#pic2,
-#pic3,
-#pic4 {
-  height: 200px;
-  position: absolute;
-}
-
-#pic1 {
-  height: 250px;
-  left: -50px;
-  top: 0px;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-  -webkit-animation-name: example1;
-          animation-name: example1;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-#pic2 {
-  height: 230px;
-  left: -40px;
-  bottom: 30px;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-  -webkit-animation-name: example2;
-          animation-name: example2;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-#pic3 {
-  height: 250px;
-  right: -50px;
-  bottom: 0px;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
-  -webkit-animation-name: example3;
-          animation-name: example3;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-#pic4 {
-  right: -60px;
-  top: 110px;
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-  -webkit-animation-name: example4;
-          animation-name: example4;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
 @-webkit-keyframes textAnim {
   from {
     opacity: 0;
@@ -210,6 +22,24 @@ html {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes textAnim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes textAnim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
   }
 }
 
@@ -283,5 +113,185 @@ html {
   to {
     right: -60px;
   }
+}
+
+@font-face {
+  font-family: FuturaBold;
+  src: url(fonts/gtcondensedblack.otf);
+}
+
+@font-face {
+  font-family: GTMono;
+  src: url(fonts/gtmonomedium.otf);
+}
+
+@font-face {
+  font-family: GTExtended;
+  src: url(fonts/gtlight.otf);
+}
+
+@font-face {
+  font-family: GT;
+  src: url(fonts/sfproheavy.otf);
+}
+
+.home-wrapper {
+  height: 100vh;
+  background: black;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page2 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  color: white;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  position: relative;
+}
+
+.headerActive {
+  width: 100vw;
+  z-index: 33;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+}
+
+#hamburger-item {
+  height: 18px;
+  position: absolute;
+  right: 30px;
+  margin-top: 42px;
+  opacity: 0;
+}
+
+.page1 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page1 h1 {
+  text-align: center;
+  color: white;
+  opacity: 0.3;
+  line-height: 40px;
+  margin: 0;
+  font-family: GTExtended;
+}
+
+.page1 #hellotext1 {
+  font-size: 20px;
+  -webkit-animation-name: textAnim2;
+          animation-name: textAnim2;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.page1 #ace-logo {
+  width: 200px;
+  height: 88px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-animation-name: textAnim;
+          animation-name: textAnim;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.page1 #hellotext2 {
+  font-size: 20px;
+  margin-bottom: 40px;
+  -webkit-animation-name: textAnim2;
+          animation-name: textAnim2;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+#pic1,
+#pic2,
+#pic3,
+#pic4 {
+  height: 200px;
+  position: absolute;
+}
+
+#pic1 {
+  height: 250px;
+  left: -50px;
+  top: 0px;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  -webkit-animation-name: example1;
+          animation-name: example1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#pic2 {
+  height: 230px;
+  left: -40px;
+  bottom: 30px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-animation-name: example2;
+          animation-name: example2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#pic3 {
+  height: 250px;
+  right: -50px;
+  bottom: 0px;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  -webkit-animation-name: example3;
+          animation-name: example3;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#pic4 {
+  right: -60px;
+  top: 110px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  -webkit-animation-name: example4;
+          animation-name: example4;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 /*# sourceMappingURL=index.css.map */
