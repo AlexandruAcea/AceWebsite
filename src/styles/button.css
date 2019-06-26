@@ -1,0 +1,205 @@
+@-webkit-keyframes textAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes textAnim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes textAnim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes example1 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -50px;
+  }
+}
+
+@keyframes example1 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -50px;
+  }
+}
+
+@-webkit-keyframes example2 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -40px;
+  }
+}
+
+@keyframes example2 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -40px;
+  }
+}
+
+@-webkit-keyframes example3 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -50px;
+  }
+}
+
+@keyframes example3 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -50px;
+  }
+}
+
+@-webkit-keyframes example4 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -60px;
+  }
+}
+
+@keyframes example4 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -60px;
+  }
+}
+
+@font-face {
+  font-family: FuturaBold;
+  src: url(fonts/gtcondensedblack.otf);
+}
+
+@font-face {
+  font-family: GTMono;
+  src: url(fonts/gtmonomedium.otf);
+}
+
+@font-face {
+  font-family: GTExtended;
+  src: url(fonts/gtlight.otf);
+}
+
+@font-face {
+  font-family: GT;
+  src: url(fonts/sfproheavy.otf);
+}
+
+.buttonBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 16rem;
+  height: 3.5rem;
+}
+
+.upper {
+  z-index: 1;
+  position: absolute;
+  border: solid #6c5ce7 1.3px;
+  background: #000;
+  width: 15rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translate(-3px, -3px);
+          transform: translate(-3px, -3px);
+  font-family: GTExtended;
+  color: #6c5ce7;
+}
+
+.upper h1 {
+  font-family: GTExtended;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  color: white;
+  line-height: 0;
+}
+
+.downer {
+  position: absolute;
+  width: 15rem;
+  height: 3rem;
+  background: #6c5ce7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translate(3px, 3px);
+          transform: translate(3px, 3px);
+}
+
+.buttonBody:hover .upper {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.buttonBody:hover .downer {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+/*# sourceMappingURL=button.css.map */

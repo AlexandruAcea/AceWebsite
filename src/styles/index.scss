@@ -8,6 +8,7 @@ html {
 }
 
 @import "animations";
+@import "page1Content";
 
 .home-wrapper {
   height: 100vh;
@@ -32,6 +33,7 @@ html {
 
 .headerActive {
   width: 100vw;
+  height: 80px;
   z-index: 33;
   position: fixed;
   display: flex;
@@ -64,6 +66,7 @@ html {
     opacity: 0.3;
     line-height: 40px;
     margin: 0;
+    font-size: 20px;
     font-family: GTExtended;
   }
 

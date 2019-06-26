@@ -13,6 +13,16 @@ import pic4 from "../images/pic4.jpg"
 import ham from "../images/hamburger.png"
 import SEO from "../components/seo"
 
+import lgpic from "../images/svgs/lg.svg"
+import lifxpic from "../images/svgs/lifx.svg"
+import rhinopic from "../images/svgs/rhino.svg"
+import revopic from "../images/svgs/revolut.svg"
+import sgnlpic from "../images/svgs/sgnl.svg"
+
+import meridio from "../images/svgs/meridio.svg"
+import orbitkey from "../images/svgs/orbitkey.svg"
+import ismpic from "../images/svgs/ism.svg"
+
 var elem
 var scaleFactor = 1
 var opacityFactor = 0.3
@@ -115,9 +125,68 @@ class IndexPage extends React.Component {
                   : "",
             }}
           />
+
+          <div
+            className="page1Content"
+            style={{
+              display: this.state.x > 250 ? "flex" : "none",
+            }}
+          >
+            <h1>
+              I'm Alexandru but you can call me Ace. I make dope websites, like
+              this one, take pics and inspire people
+            </h1>
+          </div>
         </div>
 
-        <div className="page2" />
+        <div className="page2">
+          <div
+            className="page2Content"
+            style={{
+              display: this.state.x > 250 ? "flex" : "none",
+            }}
+          >
+            <div className="buttonSection">
+              <Button style={{ marginTop: "30px" }}>Let's Collab</Button>
+            </div>
+
+            <div className="collaborations">
+              <div className="company">
+                <img src={lgpic} alt="" />
+              </div>
+
+              <div className="company">
+                <img src={lifxpic} alt="" />
+              </div>
+
+              <div className="company">
+                <img src={rhinopic} alt="" />
+              </div>
+
+              <div className="company">
+                <img src={revopic} alt="" />
+              </div>
+
+              <div className="company">
+                <img src={meridio} alt="" />
+              </div>
+
+              <div className="company">
+                <img src={orbitkey} alt="" />
+              </div>
+
+              <div className="company">
+                <img src={ismpic} alt="" />
+              </div>
+
+              <div className="company">
+                <img src={sgnlpic} alt="" />
+              </div>
+            </div>
+            <h1>who I've worked with</h1>
+            <h2>(at least the ones with nice logos)</h2>
+          </div>
+        </div>
       </div>
     )
   }
