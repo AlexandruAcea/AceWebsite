@@ -12,6 +12,7 @@ import pic1 from "../images/pic1.jpg"
 import pic2 from "../images/pic2.jpg"
 import pic3 from "../images/pic3.jpg"
 import pic4 from "../images/pic4.jpg"
+import pic5 from "../images/pic5.jpg"
 import ham from "../images/hamburger.png"
 import thumbnail from "../images/thumb.jpg"
 
@@ -45,7 +46,7 @@ class IndexPage extends React.Component {
 
   handleScroll = e => {
     let element = e.target
-    //console.log(element.scrollTop / 1000 - 1)
+    //console.log(element.scrollTop)
 
     this.setState({ x: element.scrollTop, y: element.scrollHeight })
 
@@ -63,22 +64,48 @@ class IndexPage extends React.Component {
       opacityFactor = Math.abs(this.state.x / 1000 - 0.3)
     }
 
+    {
+      console.log(Math.abs(this.state.x / 1000 - 1))
+      console.log("STATE " + this.state.x)
+    }
+
     return (
       <div className="home-wrapper" onScroll={this.handleScroll}>
         <MetaTags thumbnail={thumbnail} />
+
+        <h1
+          style={{
+            position: "fixed",
+            color: "white",
+            left: "0",
+            top: "0",
+            zIndex: "120",
+            fontSize: "13px",
+            fontFamily: "GTMono",
+          }}
+        >
+          alpha 0.6 💁
+        </h1>
 
         <div className="page1">
           <h1 id="hellotext1" style={{ opacity: opacityFactor }}>
             hi there, i'm
           </h1>
 
-          <div className={this.state.x > 333 ? "headerActive" : "header"}>
+          <div
+            className={
+              this.state.x > 0.135 * this.state.y ? "headerActive" : "header"
+            }
+          >
             <img
               ref="acelogo"
               id="ace-logo"
               src={logoWhite}
               style={{
-                transform: `scale(${scaleFactor})`,
+                transform:
+                  this.state.x > 0.135 * this.state.y
+                    ? "scale(0.5)"
+                    : `scale(${scaleFactor})`,
               }}
             />
 
@@ -86,7 +113,7 @@ class IndexPage extends React.Component {
               id="hamburger-item"
               src={ham}
               alt=""
-              style={{ opacity: this.state.x > 0.204 * this.state.y ? 1 : 0 }}
+              style={{ opacity: this.state.x > 0.135 * this.state.y ? 1 : 0 }}
             />
           </div>
           <h1 id="hellotext2" style={{ opacity: opacityFactor }}>
@@ -138,9 +165,9 @@ class IndexPage extends React.Component {
               display: this.state.x > 250 ? "flex" : "none",
             }}
           >
-            <h1>
-              I'm Alexandru but you can call me Ace. I make dope websites, like
-              this one, take pics and inspire people
+            <h1 id="descriptionHome">
+              I'm Alexandru but you can call me Ace. I make dope websites (like
+              this one), take pics and inspire people
             </h1>
           </div>
         </div>
@@ -179,9 +206,15 @@ class IndexPage extends React.Component {
 
               <img src={sgnlpic} alt="" />
             </div>
-            <h1>who I've worked with</h1>
-            <h2>(and many more)</h2>
+            <h1>worked with them</h1>
+            <h2>(and many others)</h2>
+
+            <img id="picture1" src={pic5} />
           </div>
+        </div>
+
+        <div className="page3">
+          <h1 style={{ color: "white" }}>testing</h1>
         </div>
       </div>
     )

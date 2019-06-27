@@ -279,7 +279,7 @@ a {
 
 .headerActive {
   width: 100vw;
-  height: 80px;
+  height: 90px;
   z-index: 33;
   position: fixed;
   display: -webkit-box;
@@ -289,6 +289,8 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0));
 }
 
 #hamburger-item {
@@ -380,9 +382,9 @@ a {
 }
 
 #pic2 {
-  height: 230px;
+  height: 250px;
   left: -40px;
-  bottom: 30px;
+  bottom: 20px;
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
   -webkit-animation-name: example2;
@@ -412,5 +414,154 @@ a {
           animation-name: example4;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+}
+
+#picture1 {
+  width: 100%;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0px -70px;
+     object-position: 0px -70px;
+  margin-top: 30px;
+}
+
+@media screen and (max-device-width: 375px) and (max-device-height: 670px) {
+  #pic1 {
+    height: 240px;
+  }
+  #pic2 {
+    height: 240px;
+    bottom: -20px;
+  }
+  #pic3 {
+    height: 240px;
+    bottom: -20px;
+  }
+  #pic4 {
+    height: 190px;
+    top: 90px;
+  }
+  .page1Content h1 {
+    font-size: 18px;
+    line-height: 28px;
+    bottom: 0px;
+  }
+  .page2 .page2Content {
+    margin-top: 40px;
+  }
+  .page2 .page2Content h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .page2 .page2Content h2 {
+    font-size: 16px;
+    margin: 0;
+    margin-top: 5px;
+  }
+  .page2 .page2Content .collaborations {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-device-width: 360px) {
+  #pic1 {
+    height: 220px;
+  }
+  #pic2 {
+    height: 200px;
+    bottom: 10px;
+  }
+  #pic3 {
+    height: 200px;
+    bottom: 0px;
+  }
+  #pic4 {
+    height: 170px;
+  }
+  .page1Content h1 {
+    font-size: 18px;
+    line-height: 28px;
+    bottom: 0px;
+  }
+  .page2 .page2Content {
+    margin-top: 40px;
+  }
+  .page2 .page2Content h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .page2 .page2Content h2 {
+    font-size: 16px;
+    margin: 0;
+    margin-top: 5px;
+  }
+  .page2 .page2Content .collaborations {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-device-width: 325px) {
+  #pic1 {
+    height: 200px;
+  }
+  #pic2 {
+    height: 200px;
+    bottom: -20px;
+  }
+  #pic3 {
+    height: 200px;
+    bottom: -20px;
+  }
+  #pic4 {
+    height: 160px;
+    top: 90px;
+  }
+  #descriptionHome {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .page1Content h1 {
+    bottom: 0px;
+  }
+  .page2 .page2Content {
+    margin-top: 40px;
+  }
+  .page2 .collaborations {
+    margin-top: 90px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
+  .page2 h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .page2 h2 {
+    font-size: 16px;
+    margin: 0;
+    margin-top: 5px;
+  }
+  a {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.page3 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  color: white;
 }
 /*# sourceMappingURL=index.css.map */
