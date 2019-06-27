@@ -1,6 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
+import MetaTags from "../components/MetaTags"
+
 import { Button } from "../components/common"
 import "../styles/index.css"
 import "../styles/index.queries.css"
@@ -11,6 +13,8 @@ import pic2 from "../images/pic2.jpg"
 import pic3 from "../images/pic3.jpg"
 import pic4 from "../images/pic4.jpg"
 import ham from "../images/hamburger.png"
+import thumbnail from "../images/thumb.jpg"
+
 import SEO from "../components/seo"
 
 import lgpic from "../images/svgs/lg.svg"
@@ -61,6 +65,8 @@ class IndexPage extends React.Component {
 
     return (
       <div className="home-wrapper" onScroll={this.handleScroll}>
+        <MetaTags thumbnail={thumbnail} />
+
         <div className="page1">
           <h1 id="hellotext1" style={{ opacity: opacityFactor }}>
             hi there, i'm
@@ -147,44 +153,34 @@ class IndexPage extends React.Component {
             }}
           >
             <div className="buttonSection">
-              <Button style={{ marginTop: "30px" }}>Let's Collab</Button>
+              <a
+                href="mailto:hi@alexacea.com?Subject=Let's%20collab!"
+                target="_top"
+              >
+                {" "}
+                <Button style={{ marginTop: "30px" }}>Let's Collab</Button>
+              </a>
             </div>
 
             <div className="collaborations">
-              <div className="company">
-                <img src={lgpic} alt="" />
-              </div>
+              <img src={lgpic} alt="" />
 
-              <div className="company">
-                <img src={lifxpic} alt="" />
-              </div>
+              <img src={lifxpic} alt="" />
 
-              <div className="company">
-                <img src={rhinopic} alt="" />
-              </div>
+              <img src={rhinopic} alt="" />
 
-              <div className="company">
-                <img src={revopic} alt="" />
-              </div>
+              <img src={revopic} alt="" />
 
-              <div className="company">
-                <img src={meridio} alt="" />
-              </div>
+              <img src={meridio} alt="" />
 
-              <div className="company">
-                <img src={orbitkey} alt="" />
-              </div>
+              <img src={orbitkey} alt="" />
 
-              <div className="company">
-                <img src={ismpic} alt="" />
-              </div>
+              <img src={ismpic} alt="" />
 
-              <div className="company">
-                <img src={sgnlpic} alt="" />
-              </div>
+              <img src={sgnlpic} alt="" />
             </div>
             <h1>who I've worked with</h1>
-            <h2>(at least the ones with nice logos)</h2>
+            <h2>(and many more)</h2>
           </div>
         </div>
       </div>
