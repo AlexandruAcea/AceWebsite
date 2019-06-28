@@ -222,15 +222,21 @@ class IndexPage extends React.Component {
                 do.
               </h2>
             </div>
-            <div className="buttonSection" style={{ marginTop: "70px" }}>
-              <a
-                href="mailto:hi@alexacea.com?Subject=Let's%work together!"
-                target="_top"
-              >
-                {" "}
-                <Button>Let's work together</Button>
-              </a>
-            </div>
+          </div>
+          <div
+            className="buttonSection"
+            style={{
+              marginTop: "70px",
+              display: this.state.x > 250 ? "flex" : "none",
+            }}
+          >
+            <a
+              href="mailto:hi@alexacea.com?Subject=Let's%work together!"
+              target="_top"
+            >
+              {" "}
+              <Button>Let's work together</Button>
+            </a>
           </div>
         </div>
 

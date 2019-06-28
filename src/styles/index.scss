@@ -50,6 +50,10 @@ html {
   opacity: 0;
 }
 
+#descriptionHome {
+  font-size: 20px;
+}
+
 .page1 {
   position: relative;
   overflow: hidden;
@@ -65,7 +69,7 @@ html {
     text-align: center;
     color: white;
     opacity: 0.6;
-    line-height: 40px;
+    line-height: 35px;
     margin: 0;
     font-size: 20px;
     font-family: GTExtended;
@@ -144,3 +148,10 @@ html {
 
 @import "responsive";
 @import "page3";
+
+#descriptionHome {
+  font-size: 20px;
+  opacity: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+}

@@ -323,6 +323,10 @@ a {
   opacity: 0;
 }
 
+#descriptionHome {
+  font-size: 20px;
+}
+
 .page1 {
   position: relative;
   overflow: hidden;
@@ -348,7 +352,7 @@ a {
   text-align: center;
   color: white;
   opacity: 0.6;
-  line-height: 40px;
+  line-height: 35px;
   margin: 0;
   font-size: 20px;
   font-family: GTExtended;
@@ -575,5 +579,12 @@ a {
   width: 100vw;
   background: black;
   color: white;
+}
+
+#descriptionHome {
+  font-size: 20px;
+  opacity: 1;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 /*# sourceMappingURL=index.css.map */
