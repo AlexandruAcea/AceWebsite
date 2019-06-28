@@ -12,7 +12,7 @@ import pic1 from "../images/pic1.jpg"
 import pic2 from "../images/pic2.jpg"
 import pic3 from "../images/pic3.jpg"
 import pic4 from "../images/pic4.jpg"
-import pic5 from "../images/pic5.jpg"
+
 import ham from "../images/hamburger.png"
 import thumbnail from "../images/thumb.jpg"
 
@@ -64,11 +64,6 @@ class IndexPage extends React.Component {
       opacityFactor = Math.abs(this.state.x / 1000 - 0.3)
     }
 
-    {
-      console.log(Math.abs(this.state.x / 1000 - 1))
-      console.log("STATE " + this.state.x)
-    }
-
     return (
       <div className="home-wrapper" onScroll={this.handleScroll}>
         <MetaTags thumbnail={thumbnail} />
@@ -84,7 +79,7 @@ class IndexPage extends React.Component {
             fontFamily: "GTMono",
           }}
         >
-          alpha 0.6 💁
+          alpha 0.8 💁
         </h1>
 
         <div className="page1">
@@ -103,7 +98,7 @@ class IndexPage extends React.Component {
               src={logoWhite}
               style={{
                 transform:
-                  this.state.x > 0.135 * this.state.y
+                  this.state.x > 0.3 * this.state.y
                     ? "scale(0.5)"
                     : `scale(${scaleFactor})`,
               }}
@@ -124,18 +119,20 @@ class IndexPage extends React.Component {
             id="pic1"
             src={pic1}
             style={{
-              transform: `translate(${"-" +
-                this.state.x +
-                "px"},0px) rotate(20deg)`,
+              transform:
+                this.state.x > 0
+                  ? `translate(${"-" + this.state.x + "px"},0px) rotate(20deg)`
+                  : "",
             }}
           />
           <img
             id="pic2"
             src={pic2}
             style={{
-              transform: `translate(${"-" +
-                this.state.x +
-                "px"},0px) rotate(10deg)`,
+              transform:
+                this.state.x > 0
+                  ? `translate(${"-" + this.state.x + "px"},0px) rotate(10deg)`
+                  : "",
             }}
           />
           <img
@@ -166,8 +163,8 @@ class IndexPage extends React.Component {
             }}
           >
             <h1 id="descriptionHome">
-              I'm Alexandru but you can call me Ace. I make dope websites (like
-              this one), take pics and inspire people
+              I'm Alexandru but you can call me Ace. I make dope websites ( like
+              this one ), take pics and inspire people.
             </h1>
           </div>
         </div>
@@ -206,16 +203,40 @@ class IndexPage extends React.Component {
 
               <img src={sgnlpic} alt="" />
             </div>
-            <h1>worked with them</h1>
+            <h1>i've worked with them</h1>
             <h2>(and many others)</h2>
 
-            <img id="picture1" src={pic5} />
+            <div className="page2Content2">
+              <h1>So how can I help you?</h1>
+              <h2>
+                I'm a JavaScript dev, working with the newest technologies such
+                as ReactJS, Sass, GraphQL and others. I'm currently looking to
+                get hired or get freelance projects.
+              </h2>
+
+              <h1 style={{ marginTop: "40px" }}>Instagram</h1>
+              <h2>
+                Aside from coding I take a lot of pictures, and most of them end
+                up on Instagram where I have a community of 45k people. I care a
+                lot about good design and strive to achieve that in eveyrthing I
+                do.
+              </h2>
+            </div>
+            <div className="buttonSection" style={{ marginTop: "70px" }}>
+              <a
+                href="mailto:hi@alexacea.com?Subject=Let's%work together!"
+                target="_top"
+              >
+                {" "}
+                <Button>Let's work together</Button>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="page3">
-          <h1 style={{ color: "white" }}>testing</h1>
-        </div>
+        {
+          //&lt; &frasl; &gt;
+        }
       </div>
     )
   }
