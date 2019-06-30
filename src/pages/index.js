@@ -1,5 +1,7 @@
 import React from "react"
 
+import window from "global"
+
 import MetaTags from "../components/MetaTags"
 
 import { Button } from "../components/common"
@@ -29,6 +31,8 @@ import ismpic from "../images/svgs/ism.svg"
 var scaleFactor = 1
 var opacityFactor = 0.3
 
+var isInstagram
+
 class IndexPage extends React.Component {
   state = {
     x: 0,
@@ -37,16 +41,18 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll, true)
+    window.addEventListener("scroll", this.handleScroll)
+    var ua =
+      window.navigator.userAgent || window.navigator.vendor || window.opera
+    var isInstagram = ua.indexOf("Instagram") > -1 ? true : false
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll)
   }
 
   handleScroll = e => {
-    let element = e.target
-
-    this.setState({ x: element.scrollTop, y: element.scrollHeight })
-
-    if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-    }
+    this.setState({ x: window.scrollY, y: window.innerHeight })
   }
 
   drawerSwitch = () => {
@@ -63,7 +69,7 @@ class IndexPage extends React.Component {
     }
 
     return (
-      <div className="home-wrapper" onScroll={this.handleScroll}>
+      <div className="home-wrapper">
         <MetaTags thumbnail={thumbnail} />
 
         <Drawer
@@ -82,7 +88,7 @@ class IndexPage extends React.Component {
             fontFamily: "GTMono",
           }}
         >
-          alpha 0.8 💁
+          alpha 0.98 🔥
         </h1>
 
         <div className="page1">
@@ -92,7 +98,7 @@ class IndexPage extends React.Component {
 
           <div
             className={
-              this.state.x > 0.135 * this.state.y ? "headerActive" : "header"
+              this.state.x > 0.41 * this.state.y ? "headerActive" : "header"
             }
           >
             <img
@@ -100,7 +106,7 @@ class IndexPage extends React.Component {
               src={logoWhite}
               style={{
                 transform:
-                  this.state.x > 0.3 * this.state.y
+                  this.state.x > 0.69 * this.state.y
                     ? "scale(0.5)"
                     : `scale(${scaleFactor})`,
               }}
@@ -110,7 +116,7 @@ class IndexPage extends React.Component {
               id="hamburger-item"
               src={ham}
               alt=""
-              style={{ opacity: this.state.x > 0.135 * this.state.y ? 1 : 0 }}
+              style={{ opacity: this.state.x > 0.4 * this.state.y ? 1 : 0 }}
               onClick={this.drawerSwitch}
             />
           </div>
@@ -132,6 +138,8 @@ class IndexPage extends React.Component {
             id="pic2"
             src={pic2}
             style={{
+              bottom: window.innerHeight < 695 && isInstagram ? "-40px" : "",
+
               transform:
                 this.state.x > 0
                   ? `translate(${"-" + this.state.x + "px"},0px) rotate(10deg)`
@@ -142,6 +150,7 @@ class IndexPage extends React.Component {
             id="pic3"
             src={pic3}
             style={{
+              bottom: window.innerHeight < 695 && isInstagram ? "-40px" : "",
               transform:
                 this.state.x > 0
                   ? `translate(${this.state.x + "px"},0px) rotate(-10deg)`
@@ -152,24 +161,13 @@ class IndexPage extends React.Component {
             id="pic4"
             src={pic4}
             style={{
+              right: window.innerHeight < 695 && isInstagram ? "-80px" : "",
               transform:
                 this.state.x > 0
                   ? `translate(${this.state.x + "px"},0px) rotate(-20deg)`
                   : "",
             }}
           />
-
-          <div
-            className="page1Content"
-            style={{
-              display: this.state.x > 250 ? "flex" : "none",
-            }}
-          >
-            <h1 id="descriptionHome">
-              I'm Alexandru but you can call me Ace. I make dope websites ( like
-              this one ), take pics and inspire people.
-            </h1>
-          </div>
         </div>
 
         <div className="page2">
@@ -179,6 +177,11 @@ class IndexPage extends React.Component {
               display: this.state.x > 250 ? "flex" : "none",
             }}
           >
+            <h1 id="descriptionHome">
+              I'm Alexandru but you can call me Ace. I make dope websites (like
+              this one), take pics and inspire people.
+            </h1>
+
             <div className="buttonSection">
               <a
                 href="mailto:hi@alexacea.com?Subject=Let's%20collab!"
@@ -234,7 +237,7 @@ class IndexPage extends React.Component {
             }}
           >
             <a
-              href="mailto:hi@alexacea.com?Subject=Let's%work together!"
+              href="mailto:hi@alexacea.com?Subject=Let's work together!"
               target="_top"
             >
               {" "}

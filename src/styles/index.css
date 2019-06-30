@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-y: auto;
+  min-height: 100%;
+}
+
 * {
   margin: 0;
   overflow-y: auto;
@@ -275,7 +281,6 @@ a {
 }
 
 .home-wrapper {
-  height: 100vh;
   background: black;
   -webkit-overflow-scrolling: touch;
 }
@@ -325,6 +330,9 @@ a {
 
 #descriptionHome {
   font-size: 20px;
+  margin-bottom: 60px;
+  height: initial;
+  overflow: hidden;
 }
 
 .page1 {
@@ -573,6 +581,24 @@ a {
   }
 }
 
+@media screen and (max-device-height: 695px) {
+  #pic1 {
+    height: 230px;
+  }
+  #pic2 {
+    height: 240px;
+    bottom: -20px;
+  }
+  #pic3 {
+    height: 240px;
+    bottom: -20px;
+  }
+  #pic4 {
+    height: 190px;
+    top: 90px;
+  }
+}
+
 .page3 {
   position: relative;
   height: 100vh;
@@ -586,5 +612,13 @@ a {
   opacity: 1;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+h1,
+h2,
+h3,
+p {
+  height: initial;
+  overflow: hidden;
 }
 /*# sourceMappingURL=index.css.map */

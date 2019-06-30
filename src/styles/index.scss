@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-y: auto;
+  min-height: 100%;
+}
+
 * {
   margin: 0;
   overflow-y: auto;
@@ -11,7 +17,6 @@ html {
 @import "page1Content";
 
 .home-wrapper {
-  height: 100vh;
   background: black;
   -webkit-overflow-scrolling: touch;
 }
@@ -52,6 +57,9 @@ html {
 
 #descriptionHome {
   font-size: 20px;
+  margin-bottom: 60px;
+  height: initial;
+  overflow: hidden;
 }
 
 .page1 {
@@ -154,4 +162,12 @@ html {
   opacity: 1;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+h1,
+h2,
+h3,
+p {
+  height: initial;
+  overflow: hidden;
 }

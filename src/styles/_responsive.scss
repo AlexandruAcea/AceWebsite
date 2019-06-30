@@ -158,3 +158,24 @@
     align-items: center;
   }
 }
+
+@media screen and (max-device-height: 695px) {
+  #pic1 {
+    height: 230px;
+  }
+
+  #pic2 {
+    height: 240px;
+    bottom: -20px;
+  }
+
+  #pic3 {
+    height: 240px;
+    bottom: -20px;
+  }
+
+  #pic4 {
+    height: 190px;
+    top: 90px;
+  }
+}
