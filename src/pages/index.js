@@ -1,9 +1,9 @@
 import React from "react"
-import ReactDOM from "react-dom"
 
 import MetaTags from "../components/MetaTags"
 
 import { Button } from "../components/common"
+import Drawer from "../components/Drawer"
 import "../styles/index.css"
 import "../styles/index.queries.css"
 import logoWhite from "../images/supremeletters.png"
@@ -16,8 +16,6 @@ import pic4 from "../images/pic4.jpg"
 import ham from "../images/hamburger.png"
 import thumbnail from "../images/thumb.jpg"
 
-import SEO from "../components/seo"
-
 import lgpic from "../images/svgs/lg.svg"
 import lifxpic from "../images/svgs/lifx.svg"
 import rhinopic from "../images/svgs/rhino.svg"
@@ -28,7 +26,6 @@ import meridio from "../images/svgs/meridio.svg"
 import orbitkey from "../images/svgs/orbitkey.svg"
 import ismpic from "../images/svgs/ism.svg"
 
-var elem
 var scaleFactor = 1
 var opacityFactor = 0.3
 
@@ -36,23 +33,24 @@ class IndexPage extends React.Component {
   state = {
     x: 0,
     y: 0,
+    drawerOpen: false,
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll, true)
-    elem = ReactDOM.findDOMNode(this.refs.acelogo)
-    //console.log(elem, elem.offsetHeight)
   }
 
   handleScroll = e => {
     let element = e.target
-    //console.log(element.scrollTop)
 
     this.setState({ x: element.scrollTop, y: element.scrollHeight })
 
     if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-      //console.log("hello this works")
     }
+  }
+
+  drawerSwitch = () => {
+    this.setState({ drawerOpen: !this.state.drawerOpen })
   }
 
   render() {
@@ -67,6 +65,11 @@ class IndexPage extends React.Component {
     return (
       <div className="home-wrapper" onScroll={this.handleScroll}>
         <MetaTags thumbnail={thumbnail} />
+
+        <Drawer
+          active={this.state.drawerOpen}
+          drawerSwitch={this.drawerSwitch}
+        ></Drawer>
 
         <h1
           style={{
@@ -93,7 +96,6 @@ class IndexPage extends React.Component {
             }
           >
             <img
-              ref="acelogo"
               id="ace-logo"
               src={logoWhite}
               style={{
@@ -109,6 +111,7 @@ class IndexPage extends React.Component {
               src={ham}
               alt=""
               style={{ opacity: this.state.x > 0.135 * this.state.y ? 1 : 0 }}
+              onClick={this.drawerSwitch}
             />
           </div>
           <h1 id="hellotext2" style={{ opacity: opacityFactor }}>
@@ -239,10 +242,6 @@ class IndexPage extends React.Component {
             </a>
           </div>
         </div>
-
-        {
-          //&lt; &frasl; &gt;
-        }
       </div>
     )
   }

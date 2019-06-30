@@ -1,0 +1,198 @@
+@-webkit-keyframes textAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes textAnim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes textAnim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes example1 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -50px;
+  }
+}
+
+@keyframes example1 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -50px;
+  }
+}
+
+@-webkit-keyframes example2 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -40px;
+  }
+}
+
+@keyframes example2 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -40px;
+  }
+}
+
+@-webkit-keyframes example3 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -50px;
+  }
+}
+
+@keyframes example3 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -50px;
+  }
+}
+
+@-webkit-keyframes example4 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -60px;
+  }
+}
+
+@keyframes example4 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -60px;
+  }
+}
+
+@font-face {
+  font-family: FuturaBold;
+  src: url(fonts/gtcondensedblack.otf);
+}
+
+@font-face {
+  font-family: GTMono;
+  src: url(fonts/gtmonomedium.otf);
+}
+
+@font-face {
+  font-family: GTExtended;
+  src: url(fonts/gtlight.otf);
+}
+
+@font-face {
+  font-family: GT;
+  src: url(fonts/sfproheavy.otf);
+}
+
+.drawer-wrapper {
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  -webkit-animation-name: textAnim;
+          animation-name: textAnim;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.drawer-wrapper a {
+  margin: 0;
+  height: initial;
+  width: initial;
+  text-decoration: none;
+}
+
+.drawer-wrapper ul {
+  margin: 0;
+}
+
+.drawer-wrapper ul li {
+  margin-bottom: 50px;
+}
+
+.drawer-wrapper h1 {
+  text-align: center;
+  color: white;
+  line-height: 35px;
+  margin: 0;
+  font-size: 30px;
+  font-family: GTExtended;
+}
+
+.drawer-wrapper .socialMediaLinks {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.drawer-wrapper .socialMediaLinks img {
+  height: 30px;
+  margin-right: 30px;
+}
+/*# sourceMappingURL=drawerstyle.css.map */
