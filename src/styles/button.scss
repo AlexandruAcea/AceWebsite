@@ -21,7 +21,6 @@
   align-items: center;
   justify-content: center;
   transition: 0.3s;
-  transform: translate(-3px, -3px);
   font-family: GTExtended;
   color: #6c5ce7;
 }
@@ -34,21 +33,8 @@
   line-height: 0;
 }
 
-.downer {
-  position: absolute;
-  width: 15rem;
-  height: 3rem;
+.upper:hover {
+  transition: 0.3s;
   background: #6c5ce7;
-  transition: 0.3s;
-  transform: translate(3px, 3px);
-}
-
-.buttonBody:hover .upper {
-  transition: 0.3s;
-  transform: translate(0px, 0px);
-}
-
-.buttonBody:hover .downer {
-  transition: 0.3s;
-  transform: translate(0px, 0px);
+  color: white;
 }

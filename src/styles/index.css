@@ -124,21 +124,25 @@ body {
 @font-face {
   font-family: FuturaBold;
   src: url(fonts/gtcondensedblack.otf);
+  font-display: auto;
 }
 
 @font-face {
   font-family: GTMono;
   src: url(fonts/gtmonomedium.otf);
+  font-display: auto;
 }
 
 @font-face {
   font-family: GTExtended;
   src: url(fonts/gtlight.otf);
+  font-display: auto;
 }
 
 @font-face {
   font-family: GT;
   src: url(fonts/sfproheavy.otf);
+  font-display: auto;
 }
 
 .page1Content {
@@ -581,7 +585,7 @@ a {
   }
 }
 
-@media screen and (max-device-height: 695px) {
+@media screen and (max-device-height: 700px) {
   #pic1 {
     height: 230px;
   }

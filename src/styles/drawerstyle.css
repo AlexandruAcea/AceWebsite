@@ -109,28 +109,32 @@
 @font-face {
   font-family: FuturaBold;
   src: url(fonts/gtcondensedblack.otf);
+  font-display: auto;
 }
 
 @font-face {
   font-family: GTMono;
   src: url(fonts/gtmonomedium.otf);
+  font-display: auto;
 }
 
 @font-face {
   font-family: GTExtended;
   src: url(fonts/gtlight.otf);
+  font-display: auto;
 }
 
 @font-face {
   font-family: GT;
   src: url(fonts/sfproheavy.otf);
+  font-display: auto;
 }
 
 .drawer-wrapper {
   height: 100%;
   width: 100vw;
   position: fixed;
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,8 +152,8 @@
   display: none;
   -webkit-animation-name: textAnim;
           animation-name: textAnim;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 
 .drawer-wrapper a {

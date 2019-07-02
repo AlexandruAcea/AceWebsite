@@ -109,21 +109,25 @@
 @font-face {
   font-family: FuturaBold;
   src: url(fonts/gtcondensedblack.otf);
+  font-display: auto;
 }
 
 @font-face {
   font-family: GTMono;
   src: url(fonts/gtmonomedium.otf);
+  font-display: auto;
 }
 
 @font-face {
   font-family: GTExtended;
   src: url(fonts/gtlight.otf);
+  font-display: auto;
 }
 
 @font-face {
   font-family: GT;
   src: url(fonts/sfproheavy.otf);
+  font-display: auto;
 }
 
 .buttonBody {
@@ -163,8 +167,6 @@
           justify-content: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-transform: translate(-3px, -3px);
-          transform: translate(-3px, -3px);
   font-family: GTExtended;
   color: #6c5ce7;
 }
@@ -178,28 +180,10 @@
   line-height: 0;
 }
 
-.downer {
-  position: absolute;
-  width: 15rem;
-  height: 3rem;
+.upper:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background: #6c5ce7;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: translate(3px, 3px);
-          transform: translate(3px, 3px);
-}
-
-.buttonBody:hover .upper {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
-}
-
-.buttonBody:hover .downer {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+  color: white;
 }
 /*# sourceMappingURL=button.css.map */
