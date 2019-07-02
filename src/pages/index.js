@@ -31,8 +31,6 @@ import ismpic from "../images/svgs/ism.svg"
 var scaleFactor = 1
 var opacityFactor = 0.3
 
-var isInstagram
-
 class IndexPage extends React.Component {
   state = {
     x: 0,
@@ -42,9 +40,6 @@ class IndexPage extends React.Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll)
-    var ua =
-      window.navigator.userAgent || window.navigator.vendor || window.opera
-    var isInstagram = ua.indexOf("Instagram") > -1 ? true : false
   }
 
   componentWillUnmount() {
@@ -60,6 +55,10 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    var ua =
+      window.navigator.userAgent || window.navigator.vendor || window.opera
+    var isInstagram = ua.indexOf("Instagram") > -1 ? true : false
+
     if (Math.abs(this.state.x / 1000 - 1) >= 0.5) {
       scaleFactor = Math.abs(this.state.x / 1000 - 1)
     }
