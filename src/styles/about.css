@@ -1,0 +1,187 @@
+@-webkit-keyframes textAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes textAnim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes textAnim2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes example1 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -50px;
+  }
+}
+
+@keyframes example1 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -50px;
+  }
+}
+
+@-webkit-keyframes example2 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -40px;
+  }
+}
+
+@keyframes example2 {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -40px;
+  }
+}
+
+@-webkit-keyframes example3 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -50px;
+  }
+}
+
+@keyframes example3 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -50px;
+  }
+}
+
+@-webkit-keyframes example4 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -60px;
+  }
+}
+
+@keyframes example4 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -60px;
+  }
+}
+
+@font-face {
+  font-family: FuturaBold;
+  src: url(fonts/gtcondensedblack.otf);
+  font-display: auto;
+}
+
+@font-face {
+  font-family: GTMono;
+  src: url(fonts/gtmonomedium.otf);
+  font-display: auto;
+}
+
+@font-face {
+  font-family: GTExtended;
+  src: url(fonts/gtlight.otf);
+  font-display: auto;
+}
+
+@font-face {
+  font-family: GT;
+  src: url(fonts/sfproheavy.otf);
+  font-display: auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  opacity: 1;
+  margin: 0;
+  font-size: 25px;
+  font-family: GTExtended;
+}
+
+h2 {
+  height: 30px;
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+  font-size: 20px;
+  margin: 0;
+  font-family: GTExtended;
+  margin-top: 10px;
+}
+
+.video-container {
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: fixed;
+  z-index: 1;
+}
+
+.backdrop {
+  background: black;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.aboutContent {
+  position: relative;
+  z-index: 29;
+  padding-top: 200px;
+  padding-bottom: 20px;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+/*# sourceMappingURL=about.css.map */
