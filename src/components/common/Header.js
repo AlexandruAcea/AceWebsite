@@ -8,7 +8,12 @@ const Header = props => {
     <div className="header-common-wrapper">
       <img id="ace-logo-header" src={logoWhite} />
 
-      <img id="hamburger-item-header" src={ham} alt="" />
+      <img
+        id="hamburger-item-header"
+        src={ham}
+        alt=""
+        onClick={props.drawerSwitch}
+      />
     </div>
   )
 }

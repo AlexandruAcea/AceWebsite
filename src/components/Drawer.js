@@ -16,7 +16,9 @@ const Drawer = props => {
     >
       <ul>
         <li>
-          <h1>Home</h1>
+          <Link to="/">
+            <h1>Home</h1>
+          </Link>
         </li>
         <li>
           <h1>Blog</h1>

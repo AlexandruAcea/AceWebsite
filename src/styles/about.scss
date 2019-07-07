@@ -1,3 +1,18 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-y: auto;
+  min-height: 100%;
+}
+
+* {
+  margin: 0;
+  overflow-y: auto;
+}
+
 @import "fonts";
 
 .video-container {

@@ -13,6 +13,8 @@
   display: none;
   animation-name: textAnim;
   animation-duration: 0.3s;
+  bottom: 0;
+  overflow: visible;
 
   a {
     margin: 0;
