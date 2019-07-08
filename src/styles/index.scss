@@ -45,6 +45,8 @@ body {
   width: 100vw;
   background: black;
   color: white;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .header {
@@ -62,6 +64,7 @@ body {
   display: flex;
   justify-content: center;
   top: 0;
+  overflow: hidden;
   background: linear-gradient(to bottom, #000, rgba(#000, 0));
 }
 

@@ -35,13 +35,13 @@ const Drawer = props => {
 
       <div className="socialMediaLinks">
         <a href="https://www.instagram.com/alexacea">
-          <img src={insta} alt="instagram"></img>
+          <img src={insta} alt="instagram" />
         </a>
         <a href="https://www.github.com/AlexandruAcea">
-          <img src={git} alt="github"></img>
+          <img src={git} alt="github" />
         </a>
-        <a href="https://www.linkedin.com/in/alexandru-acea-5132a859/">
-          <img src={linked} alt="linked in" style={{ marginRight: 0 }}></img>
+        <a href="https://www.linkedin.com/in/alexacea">
+          <img src={linked} alt="linked in" style={{ marginRight: 0 }} />
         </a>
       </div>
     </div>

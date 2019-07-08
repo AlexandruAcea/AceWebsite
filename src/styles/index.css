@@ -337,6 +337,8 @@ a {
   width: 100vw;
   background: black;
   color: white;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .header {
@@ -362,6 +364,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   top: 0;
+  overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0));
 }
@@ -642,6 +645,28 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  .page2 {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  #pic1 {
+    height: 400px;
+  }
+  #pic2 {
+    height: 400px;
+    bottom: -20px;
+  }
+  #pic3 {
+    height: 400px;
+    bottom: -20px;
+  }
+  #pic4 {
+    height: 360px;
+    top: 90px;
   }
 }
 
