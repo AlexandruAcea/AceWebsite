@@ -163,8 +163,20 @@ body {
 }
 
 @font-face {
-  font-family: GT;
-  src: url(fonts/sfproheavy.otf);
+  font-family: SFProNormal;
+  src: url(fonts/sfpronormal.otf);
+  font-display: auto;
+}
+
+@font-face {
+  font-family: SFProBold;
+  src: url(fonts/sfprobold.otf);
+  font-display: auto;
+}
+
+@font-face {
+  font-family: SFProLight;
+  src: url(fonts/sfprolight.otf);
   font-display: auto;
 }
 
@@ -258,7 +270,6 @@ body {
   opacity: 0.6;
   font-size: 20px;
   margin: 0;
-  font-family: GTExtended;
 }
 
 .page2 h2 {
@@ -268,7 +279,6 @@ body {
   opacity: 0.6;
   font-size: 16px;
   margin: 0;
-  font-family: GTExtended;
   margin-top: 10px;
 }
 
@@ -329,6 +339,7 @@ a {
           animation: mover 0.7s infinite alternate;
   margin: 0;
   opacity: 1;
+  font-family: SFProLight;
 }
 
 .page2 {
@@ -412,7 +423,6 @@ a {
   line-height: 35px;
   margin: 0;
   font-size: 20px;
-  font-family: GTExtended;
 }
 
 .page1 #hellotext1 {

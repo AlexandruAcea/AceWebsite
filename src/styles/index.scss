@@ -37,6 +37,7 @@ body {
   animation: mover 0.7s infinite alternate;
   margin: 0;
   opacity: 1;
+  font-family: SFProLight;
 }
 
 .page2 {
@@ -101,7 +102,7 @@ body {
     line-height: 35px;
     margin: 0;
     font-size: 20px;
-    font-family: GTExtended;
+    // font-family: GTExtended;
   }
 
   #hellotext1 {

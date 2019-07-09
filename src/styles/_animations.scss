@@ -80,7 +80,19 @@
 }
 
 @font-face {
-  font-family: GT;
-  src: url(fonts/sfproheavy.otf);
+  font-family: SFProNormal;
+  src: url(fonts/sfpronormal.otf);
+  font-display: auto;
+}
+
+@font-face {
+  font-family: SFProBold;
+  src: url(fonts/sfprobold.otf);
+  font-display: auto;
+}
+
+@font-face {
+  font-family: SFProLight;
+  src: url(fonts/sfprolight.otf);
   font-display: auto;
 }

@@ -162,8 +162,20 @@ body {
 }
 
 @font-face {
-  font-family: GT;
-  src: url(fonts/sfproheavy.otf);
+  font-family: SFProNormal;
+  src: url(fonts/sfpronormal.otf);
+  font-display: auto;
+}
+
+@font-face {
+  font-family: SFProBold;
+  src: url(fonts/sfprobold.otf);
+  font-display: auto;
+}
+
+@font-face {
+  font-family: SFProLight;
+  src: url(fonts/sfprolight.otf);
   font-display: auto;
 }
 
@@ -174,6 +186,7 @@ h1 {
   margin: 0;
   font-size: 25px;
   font-family: GTExtended;
+  font-family: SFProBold;
 }
 
 h2 {
@@ -185,6 +198,7 @@ h2 {
   margin: 0;
   font-family: GTExtended;
   margin-top: 10px;
+  font-family: SFProLight;
 }
 
 .video-container {
@@ -228,6 +242,7 @@ h2 {
 h1 {
   color: white;
   line-height: initial;
+  font-family: SFProBold;
 }
 
 h2 {
@@ -238,6 +253,8 @@ h2 {
   font-size: 18px;
   line-height: 25px;
   opacity: 1;
+  font-family: SFProNormal;
+  font-family: SFProLight;
 }
 
 a {

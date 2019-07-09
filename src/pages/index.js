@@ -86,7 +86,7 @@ class IndexPage extends React.Component {
         <Drawer
           active={this.state.drawerOpen}
           drawerSwitch={this.drawerSwitch}
-        ></Drawer>
+        />
 
         <h1
           style={{
@@ -103,9 +103,9 @@ class IndexPage extends React.Component {
         </h1>
 
         <div className="page1">
-          <h1 id="hellotext1" style={{ opacity: opacityFactor }}>
+          <h2 id="hellotext1" style={{ opacity: opacityFactor }}>
             hi there, i'm
-          </h1>
+          </h2>
 
           <div
             className={
@@ -131,9 +131,9 @@ class IndexPage extends React.Component {
               onClick={this.drawerSwitch}
             />
           </div>
-          <h1 id="hellotext2" style={{ opacity: opacityFactor }}>
+          <h2 id="hellotext2" style={{ opacity: opacityFactor, marginTop: 0 }}>
             and i'm a creator
-          </h1>
+          </h2>
 
           <img
             id="pic1"
@@ -200,10 +200,10 @@ class IndexPage extends React.Component {
               display: this.state.x > 250 ? "flex" : "none",
             }}
           >
-            <h1 id="descriptionHome">
+            <h2 id="descriptionHome">
               I'm Alexandru but you can call me Ace. I make dope websites (like
               this one), take pics and inspire people.
-            </h1>
+            </h2>
 
             <div className="buttonSection">
               <a
@@ -232,8 +232,10 @@ class IndexPage extends React.Component {
 
               <img src={ismpic} alt="" />
             </div>
-            <h1>i've worked with them</h1>
-            <h2>(and many others)</h2>
+            <h2 style={{ height: "initial", margin: 0 }}>
+              i've worked with them <br />
+              (and many others)
+            </h2>
 
             <div className="page2Content2">
               <h1>So how can I help you?</h1>
@@ -263,7 +265,6 @@ class IndexPage extends React.Component {
               href="mailto:hi@alexacea.com?Subject=Let's work together!"
               target="_top"
             >
-              {" "}
               <Button>Let's work together</Button>
             </a>
           </div>
