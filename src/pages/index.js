@@ -2,11 +2,11 @@ import React from "react"
 
 import window from "global"
 
-import MetaTags from "../components/MetaTags"
+import MetaTags from "../components/gatsby/MetaTags"
 
 import { Button } from "../components/common"
-import Drawer from "../components/Drawer"
-import "../styles/index.css"
+import Drawer from "../components/gatsby/Drawer"
+import "../styles/css/index.css"
 import "../styles/index.queries.css"
 import logoWhite from "../images/supremeletters.png"
 
@@ -249,7 +249,7 @@ class IndexPage extends React.Component {
               <h2>
                 Aside from coding I take a lot of pictures, and most of them end
                 up on Instagram where I have a community of 45k people. I care a
-                lot about good design and strive to achieve that in eveyrthing I
+                lot about good design and strive to achieve that in everything I
                 do.
               </h2>
             </div>

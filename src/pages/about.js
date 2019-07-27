@@ -1,12 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/gatsby/layout"
+import SEO from "../components/gatsby/seo"
 
-import Drawer from "../components/Drawer"
+import Drawer from "../components/gatsby/Drawer"
 
-import "../styles/about.css"
+import "../styles/css/about.css"
 
 import ovride from "../images/ovride.mp4"
 

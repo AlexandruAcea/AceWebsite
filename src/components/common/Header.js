@@ -1,5 +1,5 @@
 import React from "react"
-import "../../styles/header.css"
+import "../../styles/css/header.css"
 import logoWhite from "../../images/supremeletters.png"
 import ham from "../../images/hamburger.png"
 
