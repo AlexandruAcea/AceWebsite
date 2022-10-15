@@ -57,17 +57,13 @@ class IndexPage extends React.Component {
   }
 
   checkBrowser() {
-    var isInstagram
-
     if (typeof navigator !== "undefined" && navigator) {
       ua = navigator.userAgent || navigator.vendor || window.opera
-      isInstagram =
-        ua.indexOf("Instagram") > -1 || ua.indexOf("FBAN/Messenger") > -1
+      return ua.indexOf("Instagram") > -1 || ua.indexOf("FBAN/Messenger") > -1
           ? true
           : false
     }
-
-    return isInstagram
+    return false;
   }
 
   render() {
@@ -92,9 +88,9 @@ class IndexPage extends React.Component {
           style={{
             position: "fixed",
             color: "white",
-            left: "0",
-            top: "0",
-            zIndex: "120",
+            left: 0,
+            top: 0,
+            zIndex: 120,
             fontSize: "13px",
             fontFamily: "GTMono",
           }}
@@ -115,6 +111,7 @@ class IndexPage extends React.Component {
             <img
               id="ace-logo"
               src={logoWhite}
+              alt="Ace logo"
               style={{
                 transform:
                   this.state.x > 0.69 * this.state.y
@@ -126,7 +123,7 @@ class IndexPage extends React.Component {
             <img
               id="hamburger-item"
               src={ham}
-              alt=""
+              alt="Hamburger menu"
               style={{ opacity: this.state.x > 0.4 * this.state.y ? 1 : 0 }}
               onClick={this.drawerSwitch}
             />
@@ -138,6 +135,7 @@ class IndexPage extends React.Component {
           <img
             id="pic1"
             src={pic1}
+            role="presentation"
             style={{
               transform:
                 this.state.x > 0
@@ -148,6 +146,7 @@ class IndexPage extends React.Component {
           <img
             id="pic2"
             src={pic2}
+            role="presentation"
             style={{
               bottom:
                 window.innerHeight < 695 && this.checkBrowser() ? "-40px" : "",
@@ -161,6 +160,7 @@ class IndexPage extends React.Component {
           <img
             id="pic3"
             src={pic3}
+            role="presentation"
             style={{
               bottom:
                 window.innerHeight < 695 && this.checkBrowser() ? "-40px" : "",
@@ -173,6 +173,7 @@ class IndexPage extends React.Component {
           <img
             id="pic4"
             src={pic4}
+            role="presentation"
             style={{
               right:
                 window.innerHeight < 695 && this.checkBrowser() ? "-80px" : "",
@@ -209,28 +210,28 @@ class IndexPage extends React.Component {
               <a
                 href="mailto:hi@alexacea.com?Subject=Let's%20collab!"
                 target="_top"
+                rel="noopener noreferrer"
               >
-                {" "}
                 <Button style={{ marginTop: "30px" }}>Let's Collab</Button>
               </a>
             </div>
 
             <div className="collaborations">
-              <img src={lgpic} alt="" />
+              <img src={lgpic} alt="LG Electronics" />
 
-              <img src={lifxpic} alt="" />
+              <img src={lifxpic} alt="LIFX" />
 
-              <img src={rhinopic} alt="" />
+              <img src={rhinopic} alt="RHINOSHIELD" />
 
-              <img src={revopic} alt="" />
+              <img src={revopic} alt="Revolut" />
 
-              <img src={sgnlpic} alt="" />
+              <img src={sgnlpic} alt="Sgnl" />
 
-              <img src={orbitkey} alt="" />
+              <img src={orbitkey} alt="Orbitkey" />
 
-              <img src={nokia} alt="" />
+              <img src={nokia} alt="Nokia" />
 
-              <img src={ismpic} alt="" />
+              <img src={ismpic} alt="ISM Bags" />
             </div>
             <h2 style={{ height: "initial", margin: 0 }}>
               i've worked with them <br />
@@ -264,6 +265,7 @@ class IndexPage extends React.Component {
             <a
               href="mailto:hi@alexacea.com?Subject=Let's work together!"
               target="_top"
+              rel="noopener noreferrer"
             >
               <Button>Let's work together</Button>
             </a>
